@@ -48,7 +48,22 @@ export default function Projects() {
         "Dynamic quiz with multiple questions and answers",
         "Real-time answer checking and score tracking",
         "Component-based structure with clean UI",
-      ,
+        ,
+      ],
+    },
+    {
+      id: 2,
+      title: "Fitness Tracker",
+      image:
+        "https://images.unsplash.com/photo-1483721310020-03333e577078?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D",
+        liveLink: "https://fitness-tracker-off.netlify.app/",
+      githubLink: "https://github.com/Balaji-webdev/FitnessTracker",
+      skills: ["React.js", "CSS3", "JavaScript"],
+      description:
+        "Fitness Tracker is a responsive React-based web application that allows users to track their workouts, set fitness goals, and view real-time progress. With a clean UI and intuitive design, users can log exercises and monitor their progress effectively. Built with React hooks and functional components.",
+      features: [
+        "Responsive design for all devices",
+        "Real-time updates using React state management",
       ],
     },
   ];

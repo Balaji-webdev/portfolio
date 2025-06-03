@@ -25,7 +25,7 @@ export default function HomePage() {
         <a className="btn2" href="#about">About Me</a>
         </div>
         <div className="image">
-          <img src={photo} alt="balaji photo " height="54" width="54" />
+          <img src={photo} alt="balaji photo " height="54" width="54"  />
         </div>
       </div>
     </>

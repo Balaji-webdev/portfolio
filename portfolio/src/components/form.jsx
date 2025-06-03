@@ -29,7 +29,6 @@ const handleClose = () => {
         setIsSubmitted(true);
         setTimeout(() => {
           setIsSubmitted(false);
-          onClose();
         }, 4000);
 
         form.current.reset();
