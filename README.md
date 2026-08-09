@@ -147,22 +147,23 @@ Used for:
 * Three.js scene rendering
 * Scroll-controlled 3D animations
 
-## Contact
+## 🌐 Connect With Me
 
 <p align="center">
   <a href="https://balajiportfolioofficial.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-Visit-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
   </a>
   <a href="https://github.com/Balaji-webdev" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-Balaji--webdev-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="https://www.linkedin.com/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://www.linkedin.com/in/balaji-s-11ba24291" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Balaji%20S-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn - Balaji S" />
   </a>
-  <a href="mailto:your-email@example.com">
+  <a href="mailto:balajishankar2810@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
+
 
 ---
 
