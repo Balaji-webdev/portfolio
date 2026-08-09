@@ -1,0 +1,16 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="markClip">
+      <rect x="0" y="0" width="200" height="200" rx="36"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="200" height="200" rx="36" fill="#14151f" stroke="#7c3aed" stroke-width="1.5"/>
+    <g clip-path="url(#markClip)">
+      <rect x="0" y="0" width="200" height="200" fill="#14151f"/>
+      <path d="M0 165 L65 100 L100 135 L200 35 L200 200 L0 200 Z" fill="#7c3aed" opacity="0.18"/>
+    </g>
+    <text x="100" y="140" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="110" font-weight="700" fill="#f8fafc">B</text>
+    <rect x="30" y="162" width="140" height="5" rx="2.5" fill="#06b6d4"/>
+  </g>
+</svg>

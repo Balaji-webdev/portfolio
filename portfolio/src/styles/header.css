@@ -1,59 +1,36 @@
-header {
- background-color: #424874;
-  font-family: 'Poppins', sans-serif;
-  padding: 1rem 4rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-   z-index: 1000;
-  backdrop-filter: blur(8px);
-  transition: background-color 0.3s ease; 
+/* header {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Inter', sans-serif;
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+header.scrolled {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  background-color: rgba(8, 9, 10, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
 }
 
-.header-logo h1 {
-  color: #F4EEFF;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #F4EEFF;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.nav-link {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1.03em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.25s ease;
   position: relative;
+  padding: 0.65rem 1.1rem;
 }
 
-nav a:hover {
-  color: #DCD6F7;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #A6B1E1;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
+.nav-link:hover {
+  color: var(--text-primary);
+} 
+.logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */

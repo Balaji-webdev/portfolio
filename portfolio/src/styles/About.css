@@ -1,143 +1,246 @@
 .about {
-  background-color: #DCD6F7;
+  background-color: var(--bg-primary);
   min-height: 100vh;
-  padding: 6rem 4rem;
+  padding: 120px 5% 100px;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-container {
-  background-color: #F4EEFF;
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 20px 40px rgba(66, 72, 116, 0.15);
-  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
   margin: 0 auto;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
-}
-
-.about-container:hover {
-  transform: translateY(-5px);
+  padding: 4rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  box-shadow: var(--glass-shadow);
 }
 
 .about-title {
-  color: #424874;
-  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-  font-weight: 600;
+  margin-bottom: 4rem;
 }
 
-.about-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(to right, #424874, #A6B1E1);
-  border-radius: 2px;
+.about-title h1 {
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
 .about-content {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.35fr 0.95fr;
   gap: 4rem;
   align-items: start;
 }
 
 .about-text {
-  color: #424874;
+  color: var(--text-secondary);
 }
 
 .about-text h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #424874;
-  font-weight: 500;
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .about-text p {
-  line-height: 1.8;
+  line-height: 1.75;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
 }
 
+.text-accent {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* Core Progress Bars */
+.skills-progress {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 99px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+.skills-section-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-indigo);
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Technology Tags Grid */
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .skill-item {
-  background-color: #DCD6F7;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.75rem 1.1rem;
+  border-radius: 14px;
   text-align: center;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #424874;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
 }
 
 .skill-item:hover {
-  transform: translateY(-3px);
-  background-color: #424874;
-  color: #F4EEFF;
-  box-shadow: 0 5px 15px rgba(66, 72, 116, 0.2);
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.25);
+  color: var(--text-primary);
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  padding: 0.9rem 1.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.action-primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+.action-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.action-secondary {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.action-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
 }
 
 .about-image {
-  position: relative;
-  padding: 1rem;
-}
-
-.about-image::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid #A6B1E1;
-  border-radius: 20px;
-  top: 20px;
-  left: 20px;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 120px;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 20px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 10px 30px rgba(66, 72, 116, 0.1);
+  max-width: 380px;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-image img:hover {
+  transform: scale(1.025) translateY(-4px);
+  box-shadow: 0 35px 90px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 @media (max-width: 968px) {
+  .about-container {
+    padding: 3rem 2rem;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
+    gap: 3.5rem;
   }
-  
+
   .about-image {
     order: -1;
+    position: static;
   }
   
-  .skills {
-    grid-template-columns: repeat(3, 1fr);
+  .about-image img {
+    max-width: 320px;
   }
 }
 
 @media (max-width: 576px) {
   .about {
-    padding: 4rem 2rem;
+    padding: 80px 1.5rem 60px;
   }
-  
+
+  .about-container {
+    padding: 2rem 1.25rem;
+    border-radius: 20px;
+  }
+
   .skills {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .about-container {
-    padding: 2rem;
+  .skills-progress {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 }
