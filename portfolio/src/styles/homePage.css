@@ -1,159 +1,790 @@
+﻿/* =========================================================
+   HOME / HERO SECTION
+   ========================================================= */
+
 .home {
   position: relative;
-  background-color: #f4eeff;
+
   min-height: 100vh;
-  padding: 8rem 4rem;
+  width: 100%;
+
+  padding: 120px 5% 80px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HOME INNER
+   ========================================================= */
+
+.home-inner {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  /*
+    Left side gets the remaining space.
+    Right side gets a controlled width.
+  */
+  grid-template-columns: minmax(0, 1fr) 480px;
+
+  align-items: center;
+
+  gap: 5rem;
+}
+
+
+/* =========================================================
+   HERO COPY
+   ========================================================= */
+
+.hero-copy {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: flex-start;
+
+  width: 100%;
+  min-width: 0;
+
+  gap: 1.25rem;
+
+  text-align: left;
 }
 
-.home h1 {
-  font-size: 3rem;
-  color: #424874;
+
+/* =========================================================
+   HERO BADGES
+   ========================================================= */
+
+.hero-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  gap: 0.6rem;
+}
+
+
+/* =========================================================
+   HERO TAG
+   ========================================================= */
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+
+  padding: 0.6rem 1.2rem;
+
+  border-radius: 999px;
+
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+
+  color: #60a5fa;
+
+  font-size: 0.8rem;
   font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
 }
 
-.highlight {
-  color: #a6b1e1;
+
+/* =========================================================
+   HERO SUBTITLE
+   ========================================================= */
+
+.hero-subtitle {
+  margin: 0 0 0.35rem;
+
+  color: var(--accent-indigo);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  line-height: 1.4;
 }
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero-title {
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-title h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  color: var(--text-primary);
+
+  font-size: clamp(3.2rem, 5.5vw, 5rem);
+  font-weight: 900;
+
+  line-height: 1.04;
+
+  letter-spacing: -0.04em;
+
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.gradient-text {
+  display: inline-block;
+
+  background: var(--accent-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   SECONDARY HEADING
+   ========================================================= */
 
 .home h2 {
-  font-size: 1.8rem;
-  color: #424874;
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 1.45rem;
   font-weight: 500;
+
+  letter-spacing: -0.01em;
+
+  line-height: 1.4;
 }
 
-.home p {
-  max-width: 600px;
-  color: #424874;
-  font-size: 1.1rem;
-  line-height: 1.6;
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 1.08rem;
+  line-height: 1.75;
+
+  letter-spacing: -0.005em;
 }
+
+
+/* =========================================================
+   BUTTON WRAPPER
+   ========================================================= */
 
 .btn {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  gap: 0.9rem;
+
+  margin-top: 0.75rem;
+}
+
+
+/*
+  If old buttons are still used somewhere,
+  keep these styles available.
+*/
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-height: 46px;
+
+  padding: 0.9rem 1.7rem;
+
+  border-radius: 999px;
+
+  font-family: "Inter", sans-serif;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.btn-primary {
+  background: var(--accent-gradient);
+
+  color: #fff;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 4px 20px -2px rgba(99, 102, 241, 0.3);
+}
+
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 24px -2px rgba(99, 102, 241, 0.45);
+}
+
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.03);
+
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border-color);
+}
+
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+
+  color: var(--text-primary);
+
+  border-color: var(--border-hover);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO STATS
+   ========================================================= */
+
+.hero-stats {
+  display: flex;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 2.5rem;
+
+  width: 100%;
+
   margin-top: 1rem;
 }
 
-.btn1,
-.btn2 {
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+.hero-stat {
+  min-width: 120px;
 }
 
-.btn1 {
-  background-color: #424874;
+
+.hero-stat-value {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  line-height: 1.2;
 }
 
-.btn1 a {
-  color: #f4eeff;
-  text-decoration: none;
+
+.hero-stat-label {
+  margin-top: 0.35rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.8rem;
+
+  line-height: 1.4;
 }
 
-.btn1:hover {
-  background-color: #a6b1e1;
-}
 
-.btn2 {
-  background-color: #424874;
-  color: #f4eeff;
-  text-decoration: none;
-
-}
-
-.btn2:hover {
-  background-color: #a6b1e1;
-  color: #424874;
-}
+/* =========================================================
+   IMAGE CONTAINER
+   ========================================================= */
 
 .image {
-  position: absolute;
-  right: 4rem;
-  top: 45%;
-  transform: translateY(-50%);
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
 }
+
+
+/* =========================================================
+   IMAGE FRAME
+   ========================================================= */
+
+.image-frame {
+  position: relative;
+
+  width: fit-content;
+
+  padding: 0.5rem;
+
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 0 40px rgba(59, 130, 246, 0.1);
+
+  animation: morphBlob 16s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   IMAGE FRAME OUTLINE
+   ========================================================= */
+
+.image-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -10px;
+
+  border-radius: inherit;
+
+  border: 1.5px dashed rgba(99, 102, 241, 0.25);
+
+  pointer-events: none;
+
+  animation: spinBlob 28s linear infinite;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
 
 .image img {
-  border-radius: 50%;
-  border: 4px solid #424874;
+  display: block;
+
   width: 400px;
   height: 400px;
+
+  max-width: 100%;
+
   object-fit: cover;
-  object-position: center top; /* This helps position the face/upper body better */
-  box-shadow: 0 4px 15px rgba(66, 72, 116, 0.2);
+  object-position: center top;
+
+  border-radius: inherit;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5);
+
+  transition:
+    transform 0.4s ease;
 }
 
 
-@media screen and (max-width: 1024px) {
-  .home {
-    padding: 6rem 3rem;
-    align-items: center;
-    text-align: center;
+/* =========================================================
+   IMAGE HOVER
+   ========================================================= */
+
+.image-frame:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   BLOB ANIMATION
+   ========================================================= */
+
+@keyframes morphBlob {
+  0% {
+    border-radius:
+      38% 62% 63% 37% /
+      41% 44% 56% 59%;
   }
 
-  .image {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    margin-top: 2rem;
+  50% {
+    border-radius:
+      58% 42% 48% 52% /
+      55% 38% 62% 45%;
+  }
+
+  100% {
+    border-radius:
+      42% 58% 38% 62% /
+      39% 56% 44% 61%;
+  }
+}
+
+
+/* =========================================================
+   ROTATING OUTLINE
+   ========================================================= */
+
+@keyframes spinBlob {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   LARGE LAPTOP / TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+  .home {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .home-inner {
+    max-width: 1150px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      400px;
+
+    gap: 3.5rem;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(3rem, 5.5vw, 4.5rem);
+  }
+
+  .hero-description {
+    max-width: 650px;
   }
 
   .image img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+  .home {
+    min-height: auto;
+
+    padding:
+      110px
+      3rem
+      70px;
   }
 
-  .home p {
-    margin: 0 auto;
+  .home-inner {
+    max-width: 850px;
+
+    grid-template-columns: 1fr;
+
+    gap: 3.5rem;
+
+    text-align: center;
+  }
+
+  .hero-copy {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-title h1 {
+    max-width: 800px;
+
+    font-size: clamp(3rem, 8vw, 4.5rem);
+  }
+
+  .hero-description {
+    max-width: 700px;
+
+    font-size: 1.05rem;
   }
 
   .btn {
     justify-content: center;
   }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .image {
+    order: 2;
+  }
+
+  .image img {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media screen and (max-width: 768px) {
   .home {
-    padding: 5rem 1.5rem;
-    gap: 1rem;
+    padding:
+      90px
+      1.5rem
+      50px;
   }
 
-  .home h1 {
-    font-size: 2rem;
+  .home-inner {
+    gap: 2.75rem;
+  }
+
+  .hero-copy {
+    gap: 1.1rem;
+  }
+
+  .hero-badges {
+    gap: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.78rem;
+
+    letter-spacing: 0.12em;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
   }
 
   .home h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
-  .home p {
-    font-size: 1rem;
+  .hero-description {
+    max-width: 100%;
+
+    font-size: 0.98rem;
+
+    line-height: 1.7;
   }
 
   .btn {
     flex-direction: column;
-    gap: 1rem;
+
+    align-items: stretch;
+
     width: 100%;
-    max-width: 300px;
+
+    max-width: 360px;
+
+    margin-top: 0.5rem;
   }
 
-  .btn1, .btn2 {
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
-    padding: 0.8rem 1rem;
+
+    min-height: 46px;
+
+    padding:
+      0.85rem
+      1.5rem;
+  }
+
+  .hero-stats {
+    justify-content: center;
+
+    gap:
+      1.5rem
+      2rem;
+
+    margin-top: 0.75rem;
+  }
+
+  .hero-stat {
+    min-width: 100px;
+  }
+
+  .hero-stat-value {
+    font-size: 1.5rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
   }
 
   .image img {
-    width: 250px;
-    height: 250px;
-    border-width: 3px;
+    width: 270px;
+    height: 270px;
+  }
+
+  .image-frame::after {
+    inset: -7px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+  .home {
+    padding:
+      80px
+      1rem
+      40px;
+  }
+
+  .home-inner {
+    gap: 2.25rem;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(2.4rem, 13vw, 3.4rem);
+  }
+
+  .hero-description {
+    font-size: 0.94rem;
+  }
+
+  .hero-badges {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .hero-stats {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 1.25rem;
+  }
+
+  .hero-stat {
+    min-width: 0;
+  }
+
+  .hero-stat-value {
+    font-size: 1.4rem;
+  }
+
+  .image img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .image-frame {
+    padding: 0.4rem;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+  .home {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .hero-title h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .image img {
+    width: 210px;
+    height: 210px;
   }
 }
